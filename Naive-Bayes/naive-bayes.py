@@ -23,5 +23,5 @@ model = GaussianNB()
 
 model.fit(x, y)
 
-predicted = model.predict([6, 130, 8])
+predicted = model.predict(np.array([6, 130, 8]).reshape(1, -1))
 print predicted
