@@ -6,9 +6,10 @@ from sklearn.neighbors import KNeighborsClassifier
 np.random.seed(28)
 
 # load data of iris dataset and separate it into feature(x) and label(y)
-data_source = datasets.load_iris()
-data_x = data_source.data
-data_y = data_source.target
+# data_source = datasets.load_iris()
+# data_x = data_source.data
+# data_y = data_source.target
+data_x, data_y = datasets.load_iris(return_X_y=True)
 
 # randomly separate data into train and test
 random_separator = np.random.permutation(len(data_x))
