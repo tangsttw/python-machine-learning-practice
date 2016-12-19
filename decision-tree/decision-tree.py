@@ -1,6 +1,7 @@
 from sklearn import datasets
 from sklearn.tree import DecisionTreeClassifier, export_graphviz
 import subprocess
+import time
 
 # load dataset and feature name
 iris_x, iris_y = datasets.load_iris(return_X_y=True)
@@ -8,7 +9,12 @@ feature_names = list(datasets.load_iris().feature_names)
 
 # create model and fit
 model = DecisionTreeClassifier()
+
+train_start = time.time()
 model.fit(iris_x, iris_y)
+train_duration = time.time() - train_start
+
+print "the training takes %f seconds." % train_duration
 
 # the visualization function
 def tree_visualize(model, feature):
