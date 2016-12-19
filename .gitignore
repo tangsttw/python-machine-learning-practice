@@ -2,8 +2,8 @@
 *.o
 *.a
 *.so
-decision-tree/tree.dot
-decision-tree/tree.png
+tree.dot
+tree.png
 
 # Folders
 _obj
